@@ -13,4 +13,4 @@ def stereometry(r, h):
 
 
 if __name__ == '__main__':
-    print(stereometry(2, 1))
+    pass
