@@ -3,14 +3,11 @@ from datetime import date
 
 def coffee_limits(year, month, day):
     h = int(str(date(year, month, day)).replace('-', ''))
-        
     hc, hd = h, h
-    cc = 0
     
-    cafe = int('CAFE', 16)
-    decaf = int('DECAF', 16)
-    
+    cafe, decaf = int('CAFE', 16), int('DECAF', 16)
     found = [False, False]
+    cc = 0
     
     while not all(found):
         if cc != 0:
@@ -25,8 +22,8 @@ def coffee_limits(year, month, day):
         hd += decaf
         cc += 1
 
-    print(cc)
     return [c_limit, d_limit]
+        
 
 
 if __name__ == '__main__':
